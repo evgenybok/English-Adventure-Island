@@ -13,7 +13,7 @@ public class DataBaseManager : MonoBehaviour
     public TMP_InputField usernameInputField;
     public TMP_InputField passwordInputField;
     private DatabaseReference dbReference;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class DataBaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void CreateUser()
