@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1071529461100",
+    "firebase_url": "https://english-adventure-island-1873d-default-rtdb.firebaseio.com",
+    "project_id": "english-adventure-island-1873d",
+    "storage_bucket": "english-adventure-island-1873d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071529461100:android:fa174afbe417d85c935f49",
+        "android_client_info": {
+          "package_name": "com.eai.firebasedb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKkf7tSnEw4mAF7W1EhmyOErTNXIKzEGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
