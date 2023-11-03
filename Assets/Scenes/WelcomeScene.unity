@@ -341,26 +341,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 236292322}
-  - component: {fileID: 236292321}
+  - component: {fileID: 236292323}
   m_Layer: 0
-  m_Name: ChangeScene
+  m_Name: RegChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &236292321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 236292320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf60df837dbb264c9027b6e1453ed30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &236292322
 Transform:
   m_ObjectHideFlags: 0
@@ -376,6 +364,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &236292323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236292320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cd283b5a50e1c4ba460abc9cd3ce34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &297758200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,8 +1322,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236292321}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 236292323}
+        m_TargetAssemblyTypeName: RegChangeScene, Assembly-CSharp
         m_MethodName: MoveToscene
         m_Mode: 3
         m_Arguments:
@@ -1788,8 +1788,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236292321}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 236292323}
+        m_TargetAssemblyTypeName: RegChangeScene, Assembly-CSharp
         m_MethodName: MoveToscene
         m_Mode: 3
         m_Arguments:

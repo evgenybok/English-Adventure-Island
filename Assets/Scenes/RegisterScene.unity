@@ -2054,7 +2054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 656546932}
-  - component: {fileID: 656546931}
+  - component: {fileID: 656546933}
   m_Layer: 0
   m_Name: DatabaseManager
   m_TagString: Untagged
@@ -2062,28 +2062,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &656546931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656546930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90229a70c11eb1b498d66b1aea839c2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dependencyStatus: 0
-  emailLoginField: {fileID: 0}
-  passwordLoginField: {fileID: 0}
-  warningLoginText: {fileID: 0}
-  confirmLoginText: {fileID: 0}
-  usernameRegisterField: {fileID: 1285714783}
-  emailRegisterField: {fileID: 641602555}
-  passwordRegisterField: {fileID: 634212216}
-  passwordRegisterVerifyField: {fileID: 1302338992}
-  warningRegisterText: {fileID: 1079377399}
 --- !u!4 &656546932
 Transform:
   m_ObjectHideFlags: 0
@@ -2099,6 +2077,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656546933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656546930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0540a94363320344bc9246266696eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usernameInputField: {fileID: 1285714783}
+  passwordInputField: {fileID: 634212216}
+  emailInputField: {fileID: 641602555}
+  nameInputField: {fileID: 1302338992}
+  ageInputField: {fileID: 341701128}
 --- !u!1 &722343695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,26 +3437,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1243022034}
-  - component: {fileID: 1243022033}
+  - component: {fileID: 1243022035}
   m_Layer: 0
-  m_Name: ChangeScene
+  m_Name: RegChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1243022033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243022032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf60df837dbb264c9027b6e1453ed30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1243022034
 Transform:
   m_ObjectHideFlags: 0
@@ -3477,6 +3460,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243022035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243022032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cd283b5a50e1c4ba460abc9cd3ce34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1279341415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4081,8 +4076,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1243022033}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 1243022035}
+        m_TargetAssemblyTypeName: RegChangeScene, Assembly-CSharp
         m_MethodName: MoveToscene
         m_Mode: 3
         m_Arguments:
@@ -5700,7 +5695,6 @@ GameObject:
   - component: {fileID: 1945517560}
   - component: {fileID: 1945517559}
   - component: {fileID: 1945517562}
-  - component: {fileID: 1945517563}
   m_Layer: 5
   m_Name: Confirm
   m_TagString: Untagged
@@ -5772,21 +5766,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1243022033}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToscene
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 656546931}
-        m_TargetAssemblyTypeName: DatabaseInfo, Assembly-CSharp
-        m_MethodName: RegisterButton
+      - m_Target: {fileID: 656546933}
+        m_TargetAssemblyTypeName: DataBaseManager, Assembly-CSharp
+        m_MethodName: CreateUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5849,18 +5831,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 4, y: 4}
   m_UseGraphicAlpha: 1
---- !u!114 &1945517563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945517557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9135a30d98307ea4c87b6e886a5ed34a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2119480519
 GameObject:
   m_ObjectHideFlags: 0

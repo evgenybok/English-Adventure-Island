@@ -5,8 +5,47 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public void MoveToscene(int sceneID)
+    private DataBaseManager dataBaseManager;
+    public int sceneID;
+
+    private void Start()
     {
-        SceneManager.LoadScene(sceneID);
+        dataBaseManager = FindObjectOfType<DataBaseManager>(); // Find the instance of DataBaseManager
+        if (dataBaseManager != null)
+        {
+            DataBaseManager.OnLoginStatus += HandleLoginStatus; // Subscribe to the login status event
+        }
+        else
+        {
+            Debug.LogError("DataBaseManager not found.");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (dataBaseManager != null)
+        {
+            DataBaseManager.OnLoginStatus -= HandleLoginStatus; // Unsubscribe from the event
+        }
+    }
+
+    private void HandleLoginStatus(bool success)
+    {
+        if (success)
+        {
+            SceneManager.LoadScene(sceneID); // Scene change if login is successful
+        }
+    }
+
+    public void MoveToScene(int sceneID)
+    {
+        if (dataBaseManager != null)
+        {
+            dataBaseManager.CheckLogin();
+        }
+        else
+        {
+            Debug.LogError("DataBaseManager not found.");
+        }
     }
 }

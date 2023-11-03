@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
-    path: Assets/Scenes/WelcomeScreen.unity
+    path: Assets/Scenes/WelcomeScene.unity
     guid: 7ef5eb461f1927d4c830c09811a7aee3
   - enabled: 1
-    path: Assets/Scenes/16.6Register.unity
+    path: Assets/Scenes/RegisterScene.unity
     guid: 9aba511d1cea4914a9cc1095407c8b42
   - enabled: 1
-    path: Assets/Scenes/LoginScreen.unity
+    path: Assets/Scenes/LoginScene.unity
     guid: 7a15476e48379d944a35758a189df9e3
   - enabled: 1
     path: Assets/Scenes/MainMenuScene.unity
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelScene.unity
     guid: e8aed82642884474aa7883b3c8f24c3e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RegisterScreen.unity
     guid: 4d658731f196144488efd90c10b160e7
   m_configObjects: {}
