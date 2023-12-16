@@ -11,13 +11,13 @@ public class DataBaseManager : MonoBehaviour
     public delegate void LoginStatus(bool success); // Declare a delegate to handle login status
     public static event LoginStatus OnLoginStatus; // Declare an event to notify login status
 
-    private string userID;
+    private DatabaseReference dbReference;
+
     public TMP_InputField usernameInputField;
     public TMP_InputField passwordInputField;
     public TMP_InputField emailInputField;
     public TMP_InputField nameInputField;
     public TMP_InputField ageInputField;
-    private DatabaseReference dbReference;
 
     void Start()
     {
@@ -28,22 +28,28 @@ public class DataBaseManager : MonoBehaviour
         });
     }
 
-    public void CreateUser()
+    public async void CreateUser()
     {
+        // Check if the username or email is already in use
+        if (await IsUsernameOrEmailInUse(usernameInputField.text, emailInputField.text))
+        {
+            Debug.Log("Username or email is already in use. Please choose a different one.");
+            return;
+        }
+
         string newUserID = System.Guid.NewGuid().ToString();
         User newUser = new User(
             usernameInputField.text,
             passwordInputField.text,
-            emailInputField.text, // Add email field
-            nameInputField.text,  // Add name field
-            int.Parse(ageInputField.text) // Parse age field as an integer
+            emailInputField.text,
+            nameInputField.text,
+            int.Parse(ageInputField.text)
         );
 
         string json = JsonUtility.ToJson(newUser);
         dbReference.Child("Users").Child(newUserID).SetRawJsonValueAsync(json);
         Debug.Log("User created with username: " + newUser.username);
     }
-
 
     public async void CheckLogin()
     {
@@ -61,18 +67,26 @@ public class DataBaseManager : MonoBehaviour
                 if (storedUser.password == inputPassword)
                 {
                     Debug.Log("Login successful!");
-                    NotifyLoginStatus(true); // Notify login status with true
+                    NotifyLoginStatus(true);
                     return;
                 }
             }
         }
 
         Debug.Log("Login failed. Check your username and password.");
-        NotifyLoginStatus(false); // Notify login status with false
+        NotifyLoginStatus(false);
+    }
+
+    private async Task<bool> IsUsernameOrEmailInUse(string username, string email)
+    {
+        DataSnapshot usernameSnapshot = await dbReference.Child("Users").OrderByChild("username").EqualTo(username).GetValueAsync();
+        DataSnapshot emailSnapshot = await dbReference.Child("Users").OrderByChild("email").EqualTo(email).GetValueAsync();
+
+        return (usernameSnapshot != null && usernameSnapshot.Exists) || (emailSnapshot != null && emailSnapshot.Exists);
     }
 
     private void NotifyLoginStatus(bool success)
     {
-        OnLoginStatus?.Invoke(success); // Invoke the event with login status
+        OnLoginStatus?.Invoke(success);
     }
 }

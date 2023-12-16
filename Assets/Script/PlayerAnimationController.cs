@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
+    // Reference to the Animator component
     private Animator animator;
-    private PlayerMovement playerMovement;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-        playerMovement = GetComponent<PlayerMovement>();
+        animator = GetComponent<Animator>(); // Get the Animator component
     }
 
-    void Update()
-    {
-        // Check if the player is moving
-        bool isMoving = Mathf.Abs(playerMovement.Horizontal) > 0f;
-
-        // Set the "IsMoving" parameter in the Animator
-        animator.SetBool("IsMoving", isMoving);
-    }
+    // Remove the Update() method as the movement check is handled in PlayerMovement script
 }
