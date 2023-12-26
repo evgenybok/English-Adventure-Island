@@ -10,10 +10,10 @@ public class ChangeScene : MonoBehaviour
 
     private void Start()
     {
-        dataBaseManager = FindObjectOfType<DataBaseManager>(); // Find the instance of DataBaseManager
+        dataBaseManager = FindObjectOfType<DataBaseManager>();
         if (dataBaseManager != null)
         {
-            DataBaseManager.OnLoginStatus += HandleLoginStatus; // Subscribe to the login status event
+            DataBaseManager.OnLoginStatus += HandleLoginStatus;
         }
         else
         {
@@ -25,7 +25,7 @@ public class ChangeScene : MonoBehaviour
     {
         if (dataBaseManager != null)
         {
-            DataBaseManager.OnLoginStatus -= HandleLoginStatus; // Unsubscribe from the event
+            DataBaseManager.OnLoginStatus -= HandleLoginStatus;
         }
     }
 

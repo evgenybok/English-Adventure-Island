@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 public class DataBaseManager : MonoBehaviour
 {
-    public delegate void LoginStatus(bool success); // Declare a delegate to handle login status
-    public static event LoginStatus OnLoginStatus; // Declare an event to notify login status
+    public delegate void LoginStatus(bool success);
+    public static event LoginStatus OnLoginStatus;
 
     private DatabaseReference dbReference;
 
@@ -68,6 +68,7 @@ public class DataBaseManager : MonoBehaviour
                 {
                     Debug.Log("Login successful!");
                     NotifyLoginStatus(true);
+                    PlayerPrefs.SetString("Username", inputUsername);
                     return;
                 }
             }

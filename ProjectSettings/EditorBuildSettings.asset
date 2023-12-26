@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1Scene.unity
     guid: f8586ad5fe925f7428567966099e3e66
   - enabled: 1
-    path: Assets/Scenes/SpeechScene.unity
-    guid: 6ee917bdc1f5cb24ca9c59ac28cf7278
+    path: Assets/Scenes/Level2Scene.unity
+    guid: 64e6d44205da14246aef4796f5138c76
+  - enabled: 1
+    path: Assets/Scenes/GameAnimals.unity
+    guid: 2716c6d37196baa43bf8044916f56609
   m_configObjects: {}

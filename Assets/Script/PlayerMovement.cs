@@ -48,6 +48,15 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsMoving", isMoving);
     }
 
+    public void Jump() // New method for jumping
+    {
+        if (isGrounded && canJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            canJump = false;
+        }
+    }
+
     private void FixedUpdate()
     {
         GroundCheck();
