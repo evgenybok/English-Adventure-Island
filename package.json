@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@commander-js/extra-typings": "github:commander-js/extra-typings",
+    "com.oshoham.unity-google-cloud-streaming-speech-to-text": "^0.1.8",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}

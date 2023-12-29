@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
-  <string name="firebase_database_url" translatable="false">https://english-adventure-island-1873d-default-rtdb.firebaseio.com</string>
-  <string name="gcm_defaultSenderId" translatable="false">1071529461100</string>
-  <string name="google_storage_bucket" translatable="false">english-adventure-island-1873d.appspot.com</string>
-  <string name="project_id" translatable="false">english-adventure-island-1873d</string>
-  <string name="google_api_key" translatable="false">AIzaSyCKkf7tSnEw4mAF7W1EhmyOErTNXIKzEGo</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCKkf7tSnEw4mAF7W1EhmyOErTNXIKzEGo</string>
-  <string name="google_app_id" translatable="false">1:1071529461100:android:fa174afbe417d85c935f49</string>
+  <string name="firebase_database_url" translatable="false">https://e-a-i-ae017-default-rtdb.europe-west1.firebasedatabase.app</string>
+  <string name="gcm_defaultSenderId" translatable="false">353633846621</string>
+  <string name="google_storage_bucket" translatable="false">e-a-i-ae017.appspot.com</string>
+  <string name="project_id" translatable="false">e-a-i-ae017</string>
+  <string name="google_api_key" translatable="false">AIzaSyClH6GtsWTqlHFvLLbQsCeo6RkP33ymV70</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyClH6GtsWTqlHFvLLbQsCeo6RkP33ymV70</string>
+  <string name="google_app_id" translatable="false">1:353633846621:android:4775d2b637f3ee913e54b4</string>
 </resources>
