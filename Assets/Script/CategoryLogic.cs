@@ -27,6 +27,7 @@ public class CategoryLogic : MonoBehaviour
     public int score = 0;
 
     public AudioClip[] correctWordAudioClips;
+    public AudioClip[] animalsSoundAudioClips;
     public AudioSource audioSource;
 
     private int maxWrongAttempts = 4;
@@ -115,7 +116,7 @@ public class CategoryLogic : MonoBehaviour
 
         if (objectToApproach != null)
         {
-            objectToApproach.Translate(Vector3.right * 200f);
+            objectToApproach.Translate(Vector3.right * 1500f);
         }
         triesLeftText.text = "Tries left: " + maxWrongAttempts; // Reset tries left
         UpdateUI();

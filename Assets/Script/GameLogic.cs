@@ -8,7 +8,7 @@ public class GameLogic : MonoBehaviour
     public GoogleCloudStreamingSpeechToText.StreamingRecognizer streamingRecognizer;
     public CategoryLogic categoryLogic;
     public ObjectTrigger objectTrigger;
-
+    public AudioManager audioManager;
     private bool isObjectInSight = false;
     private bool detectedCorrectWord = false;
     private string lastDetectedWord = "";
@@ -52,6 +52,8 @@ public class GameLogic : MonoBehaviour
             {
                 // Restart streaming if the object just came into sight or the word changed
                 lastDetectedWord = categoryLogic.GetCurrentWord();
+                // audioManager.PlayAnimalSound();
+
                 streamingRecognizer.StartListening();
             }
         }

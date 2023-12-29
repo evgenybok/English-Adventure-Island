@@ -8,9 +8,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] colorsAudioClips;
     public AudioClip[] foodAudioClips;
 
+    public AudioClip[] animalSoundAudioClips;
+
     bool audioPlayed = false;
 
     public ObjectTrigger objectTrigger;
+    public CategoryLogic categoryLogic;
+
 
     void Start()
     {
@@ -47,14 +51,26 @@ public class AudioManager : MonoBehaviour
 
                 if (selectedClips != null && selectedClips.Length > 0)
                 {
-                    int randomClipIndex = Random.Range(0, selectedClips.Length);
-                    audioSource.clip = selectedClips[randomClipIndex];
+                    audioSource.clip = selectedClips[0];
                     audioSource.Play();
                     audioPlayed = true;
+                    yield return new WaitForSeconds(3f);
+                    audioSource.clip = selectedClips[1];
+                    audioSource.Play();
+                    audioPlayed = true;
+
                 }
             }
 
             yield return null;
         }
+    }
+
+    public void PlayAnimalSound()
+    {
+
+          //  audioSource.clip = animalSoundAudioClips[categoryLogic.currentWordIndex];
+          //  audioSource.Play();
+
     }
 }
