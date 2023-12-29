@@ -1669,7 +1669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryToggleGroup: {fileID: 1382445149}
   difficultyToggleGroup: {fileID: 641022954}
-  sceneIndexToLoad: 7
+  sceneIndexToLoad: 5
   warningText: {fileID: 1799421009}
   warningAudio: {fileID: 1123973539}
   categoryWarningClip: {fileID: 8300000, guid: 6845b9bd94d774a409bd1861b419a705, type: 3}
